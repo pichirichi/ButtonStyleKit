@@ -15,6 +15,10 @@ private class Data<T> {
     var disabled:    T?
 }
 
+private var _isRightToLeftLayout: Bool {
+    return UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft
+}
+
 open class ButtonStyleBuilder {
     // Basic
     private weak var button: ButtonStyleKit!
