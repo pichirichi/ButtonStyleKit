@@ -12,6 +12,7 @@ import ButtonStyleKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var button: SampleButtonStandardStyle!
+    @IBOutlet weak var buttonWithImage: SampleButtonStandardStyle!
     @IBOutlet weak var checkbox: SampleButtonCheckboxStyle!
     @IBOutlet weak var radioA: SampleButtonRadioStyle!
     @IBOutlet weak var radioB: SampleButtonRadioStyle!
@@ -54,6 +55,8 @@ class ViewController: UIViewController {
             self.group?.select(index: 2)
             self.group?.printValues()
         }
+        
+        buttonWithImage.setImage(UIImage(named: "arrow")!, for: .normal)
     }
     
     func radioOnOff() {
