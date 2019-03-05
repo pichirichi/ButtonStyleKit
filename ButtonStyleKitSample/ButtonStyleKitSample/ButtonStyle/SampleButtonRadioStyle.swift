@@ -26,7 +26,7 @@ final class SampleButtonRadioStyle: ButtonStyleSelectableBase {
             .setFont(UIFont.systemFont(ofSize: 16))
             .setContentHorizontalAlignment(.left)
             .setContentVerticalAlignment(.center)
-            .setTitleEdgeInsets(top: 0, right: 0, bottom: 0, left: 30)
+//            .setTitleEdgeInsets(top: 0, right: 0, bottom: 0, left: 30)
             .setExclusiveTouch(true)
             .build()
         
@@ -34,36 +34,39 @@ final class SampleButtonRadioStyle: ButtonStyleSelectableBase {
         buttonStyle
             .setState(.normal)
             .setTitleColor(black)
+            .setImage(UIImage(named: "radio")!)
             .build()
         
         buttonStyle
             .setState(.selected)
             .setTitleColor(black)
+            .setImage(UIImage(named: "radio_on")!)
             .build()
         
         buttonStyle
             .setState(.disabled)
             .setTitleColor(lightGray)
+            .setImage(UIImage(named: "radio_off")!)
             .build()
         
-        checkImageView = UIImageView(frame: CGRect(x: 0, y: 4, width: 28, height: 28))
-        checkImageView.image = UIImage(named: "radio")
-        addSubview(checkImageView)
+//        checkImageView = UIImageView(frame: CGRect(x: 0, y: 4, width: 28, height: 28))
+//        checkImageView.image = UIImage(named: "radio")
+//        addSubview(checkImageView)
         
         buttonStyle.apply()
     }
     
-    final override var currentState: ButtonStyleKit.ButtonState {
-        didSet {
-            /*---------- ButtonState Settings ----------*/
-            switch currentState {
-            case .disabled:
-                checkImageView.image = UIImage(named: "radio_off")
-            case .selected:
-                checkImageView.image = UIImage(named: "radio_on")
-            default:
-                checkImageView.image = UIImage(named: "radio")
-            }
-        }
-    }
+//    final override var currentState: ButtonStyleKit.ButtonState {
+//        didSet {
+//            /*---------- ButtonState Settings ----------*/
+//            switch currentState {
+//            case .disabled:
+//                checkImageView.image = UIImage(named: "radio_off")
+//            case .selected:
+//                checkImageView.image = UIImage(named: "radio_on")
+//            default:
+//                checkImageView.image = UIImage(named: "radio")
+//            }
+//        }
+//    }
 }

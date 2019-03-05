@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var button: SampleButtonStandardStyle!
     @IBOutlet weak var buttonWithImage: SampleButtonStandardWithImageStyle!
     
-    @IBOutlet weak var buttonWithImageOnRight: SampleButtonStandardWithImageOnRightStyle!
+    @IBOutlet weak var buttonWithImageOnRight: SampleButtonExpandCollapseStyle!
     
     @IBOutlet weak var checkbox: SampleButtonCheckboxStyle!
     @IBOutlet weak var radioA: SampleButtonRadioStyle!
@@ -40,9 +40,16 @@ class ViewController: UIViewController {
         buttonWithImage.setImage(UIImage(named: "arrow")!, for: .normal)
 
         // button with image on the right
-        buttonWithImageOnRight.setTitle("right arrow", for: .normal)
-        buttonWithImageOnRight.setImage(UIImage(named: "arrow")!, for: .normal)
+        buttonWithImageOnRight.setTitle("expand", for: .normal)
+        buttonWithImageOnRight.setTitle("collapse", for: .selected)
 
+        buttonWithImageOnRight.setImage(UIImage(named: "expand")!, for: .normal)
+        buttonWithImageOnRight.setImage(UIImage(named: "collapse")!, for: .selected)
+        buttonWithImageOnRight.setClickHandler { [unowned self] sender in
+            self.buttonWithImageOnRight.value = !self.buttonWithImageOnRight.value
+        }
+
+        
         radioOnOff()
         
         // Checkbox
