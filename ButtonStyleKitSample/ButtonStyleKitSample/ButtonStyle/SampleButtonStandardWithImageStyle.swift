@@ -21,14 +21,16 @@ final class SampleButtonStandardWithImageStyle: ButtonStyleStandardBase {
         buttonStyle
             .setButton(self)
             .setState(.all)
-            .setTitle("With Image")
             .setTitleColor(blue)
             .setBorderColor(blue)
             .setFont(UIFont.systemFont(ofSize: 16))
             .setCornerRadius(8.0)
             .setBorderWidth(1.0)
-            .setTitleEdgeInsets(top: 0, right: -10, bottom: 0, left: 20)
-            .setImageEdgeInsets(top: 0, right: -10, bottom: 0, left: 10)
+
+            // |-5-icon-5-text-5-|
+            .setContentEdgeInsets(top: 0, right: 10, bottom: 0, left: 5)
+            .setTitleEdgeInsets(top: 0, right: -5, bottom: 0, left: 5)
+            
             .setClipsToBounds(true)
             .setExclusiveTouch(true)
             .build()

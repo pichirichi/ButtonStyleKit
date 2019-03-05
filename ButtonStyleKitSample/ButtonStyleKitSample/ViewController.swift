@@ -32,6 +32,10 @@ class ViewController: UIViewController {
             print("clicked tag: \(sender.tag)")
         }
         
+        // button with image
+        buttonWithImage.setTitle("long arrow", for: .normal)
+        buttonWithImage.setImage(UIImage(named: "arrow")!, for: .normal)
+
         radioOnOff()
         
         // Checkbox
@@ -55,8 +59,7 @@ class ViewController: UIViewController {
             self.group?.select(index: 2)
             self.group?.printValues()
         }
-        
-        buttonWithImage.setImage(UIImage(named: "arrow")!, for: .normal)
+
     }
     
     func radioOnOff() {
