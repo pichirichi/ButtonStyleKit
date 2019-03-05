@@ -1,16 +1,16 @@
 //
-//  SampleButtonStandardWithImageStyle.swift
+//  SampleButtonStandardWithImageOnRightStyle.swift
 //  ButtonStyleKitSample
 //
 //  Created by Shai Shamir on 05/03/2019.
-//  Copyright © 2016年 keygx. All rights reserved.
+//  Copyright © 2019 keygx. All rights reserved.
 //
 
 import UIKit
 import ButtonStyleKit
 
-final class SampleButtonStandardWithImageStyle: ButtonStyleStandardBase {
-
+final class SampleButtonStandardWithImageOnRightStyle: ButtonStyleStandardBase {
+    
     private let buttonStyle = ButtonStyleBuilder()
     
     final override func initializedTrigger() {
@@ -26,8 +26,8 @@ final class SampleButtonStandardWithImageStyle: ButtonStyleStandardBase {
             .setFont(UIFont.systemFont(ofSize: 16))
             .setCornerRadius(8.0)
             .setBorderWidth(1.0)
-
-            // |-5-icon-5-text-5-|
+            
+            // |-5-text-5-icon-5-|
             .setContentEdgeInsets(top: 0, right: 10, bottom: 0, left: 5)
             .setTitleEdgeInsets(top: 0, right: -5, bottom: 0, left: 5)
             
@@ -41,6 +41,11 @@ final class SampleButtonStandardWithImageStyle: ButtonStyleStandardBase {
             .setTitleColor(orange)
             .setBorderColor(orange)
             .build()
+        
+
+        self.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
+        self.titleLabel?.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
+        self.imageView?.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
 
         buttonStyle.apply()
     }

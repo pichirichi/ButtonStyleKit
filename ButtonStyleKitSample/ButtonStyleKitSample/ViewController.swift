@@ -12,7 +12,10 @@ import ButtonStyleKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var button: SampleButtonStandardStyle!
-    @IBOutlet weak var buttonWithImage: SampleButtonStandardStyle!
+    @IBOutlet weak var buttonWithImage: SampleButtonStandardWithImageStyle!
+    
+    @IBOutlet weak var buttonWithImageOnRight: SampleButtonStandardWithImageOnRightStyle!
+    
     @IBOutlet weak var checkbox: SampleButtonCheckboxStyle!
     @IBOutlet weak var radioA: SampleButtonRadioStyle!
     @IBOutlet weak var radioB: SampleButtonRadioStyle!
@@ -35,6 +38,10 @@ class ViewController: UIViewController {
         // button with image
         buttonWithImage.setTitle("long arrow", for: .normal)
         buttonWithImage.setImage(UIImage(named: "arrow")!, for: .normal)
+
+        // button with image on the right
+        buttonWithImageOnRight.setTitle("right arrow", for: .normal)
+        buttonWithImageOnRight.setImage(UIImage(named: "arrow")!, for: .normal)
 
         radioOnOff()
         

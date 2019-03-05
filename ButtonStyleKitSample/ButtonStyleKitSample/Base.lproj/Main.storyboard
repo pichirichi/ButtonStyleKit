@@ -67,7 +67,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ID-H0-bqe" customClass="SampleButtonCheckboxStyle" customModule="ButtonStyleKitSample" customModuleProvider="target">
-                                <rect key="frame" x="10" y="220" width="120" height="36"/>
+                                <rect key="frame" x="20" y="270" width="120" height="36"/>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="IMY-c8-K5c"/>
@@ -79,7 +79,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVD-aq-QtY" customClass="SampleButtonRadioStyle" customModule="ButtonStyleKitSample" customModuleProvider="target">
-                                <rect key="frame" x="127.5" y="270" width="120" height="36"/>
+                                <rect key="frame" x="127.5" y="326" width="120" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="DWg-ST-Y2b"/>
                                     <constraint firstAttribute="height" constant="36" id="I6m-JA-495"/>
@@ -89,7 +89,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fr-zl-F2e" customClass="SampleButtonRadioStyle" customModule="ButtonStyleKitSample" customModuleProvider="target">
-                                <rect key="frame" x="127.5" y="316" width="120" height="36"/>
+                                <rect key="frame" x="127.5" y="372" width="120" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="1Gl-hV-4GY"/>
                                     <constraint firstAttribute="width" constant="120" id="VAZ-dP-N7R"/>
@@ -99,7 +99,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1m-e0-J01" customClass="SampleButtonRadioStyle" customModule="ButtonStyleKitSample" customModuleProvider="target">
-                                <rect key="frame" x="127.5" y="362" width="120" height="36"/>
+                                <rect key="frame" x="127.5" y="418" width="120" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="Qfz-L4-L5l"/>
                                     <constraint firstAttribute="width" constant="120" id="of3-Bo-Vbe"/>
@@ -109,7 +109,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zX9-ZF-CHF" customClass="SampleButtonShadowStyle" customModule="ButtonStyleKitSample" customModuleProvider="target">
-                                <rect key="frame" x="150" y="453" width="75" height="32"/>
+                                <rect key="frame" x="150" y="509" width="75" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="sHo-cA-5sk"/>
                                 </constraints>
@@ -119,9 +119,18 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quS-Ra-edC" customClass="SampleButtonStandardWithImageStyle" customModule="ButtonStyleKitSample" customModuleProvider="target">
-                                <rect key="frame" x="20" y="128" width="54" height="40"/>
+                                <rect key="frame" x="20" y="150" width="54" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="tak-hv-IVn"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dg8-zK-G5V" customClass="SampleButtonStandardWithImageOnRightStyle" customModule="ButtonStyleKitSample" customModuleProvider="target">
+                                <rect key="frame" x="20" y="200" width="54" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="jLQ-5A-3xZ"/>
                                 </constraints>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -133,29 +142,32 @@
                             <constraint firstItem="dYS-g6-0nw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="1EQ-QK-3IM"/>
                             <constraint firstItem="eVD-aq-QtY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2ch-qa-bhI"/>
                             <constraint firstItem="CJ5-OO-op2" firstAttribute="leading" secondItem="dYS-g6-0nw" secondAttribute="trailing" constant="20.5" id="3zE-W4-M3Z"/>
+                            <constraint firstItem="3ID-H0-bqe" firstAttribute="top" secondItem="Dg8-zK-G5V" secondAttribute="bottom" constant="30" id="5HJ-RR-zll"/>
                             <constraint firstItem="1Fr-zl-F2e" firstAttribute="top" secondItem="eVD-aq-QtY" secondAttribute="bottom" constant="10" id="5Sf-bE-lE8"/>
                             <constraint firstItem="oOW-cC-05x" firstAttribute="leading" secondItem="CJ5-OO-op2" secondAttribute="trailing" constant="19.5" id="7sO-7Y-bTD"/>
                             <constraint firstItem="h1m-e0-J01" firstAttribute="top" secondItem="1Fr-zl-F2e" secondAttribute="bottom" constant="10" id="FDU-23-1xG"/>
+                            <constraint firstItem="Dg8-zK-G5V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="IFP-Wc-gPa"/>
                             <constraint firstItem="quS-Ra-edC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Jrm-LG-amn"/>
-                            <constraint firstItem="quS-Ra-edC" firstAttribute="top" secondItem="9VF-Og-Iij" secondAttribute="bottom" constant="8" id="K9i-6T-FFQ"/>
+                            <constraint firstItem="quS-Ra-edC" firstAttribute="top" secondItem="9VF-Og-Iij" secondAttribute="bottom" constant="30" id="K9i-6T-FFQ"/>
                             <constraint firstAttribute="trailing" secondItem="9VF-Og-Iij" secondAttribute="trailing" constant="48" id="Pcy-Si-UIy"/>
                             <constraint firstItem="CJ5-OO-op2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PdR-Oi-vj1"/>
                             <constraint firstItem="h1m-e0-J01" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RRd-iX-GnK"/>
-                            <constraint firstItem="9VF-Og-Iij" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="Sg1-iy-x46"/>
+                            <constraint firstItem="9VF-Og-Iij" firstAttribute="top" secondItem="CJ5-OO-op2" secondAttribute="bottom" constant="20" id="SOk-7f-y5B"/>
+                            <constraint firstItem="eVD-aq-QtY" firstAttribute="top" secondItem="3ID-H0-bqe" secondAttribute="bottom" constant="20" id="UGc-mH-yUU"/>
                             <constraint firstItem="zX9-ZF-CHF" firstAttribute="top" secondItem="h1m-e0-J01" secondAttribute="bottom" constant="55" id="Wng-Lb-Qzo"/>
                             <constraint firstItem="oOW-cC-05x" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="c8q-QN-uA3"/>
-                            <constraint firstItem="eVD-aq-QtY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="250" id="cKK-ge-1jm"/>
                             <constraint firstItem="1Fr-zl-F2e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cpZ-wE-soR"/>
                             <constraint firstItem="zX9-ZF-CHF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eYk-rt-WEX"/>
                             <constraint firstItem="9VF-Og-Iij" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="47" id="fgR-Xj-2el"/>
                             <constraint firstItem="CJ5-OO-op2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="ftU-XK-Qms"/>
-                            <constraint firstItem="3ID-H0-bqe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="nMo-Ip-VnW"/>
-                            <constraint firstItem="3ID-H0-bqe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="uzj-LK-70N"/>
+                            <constraint firstItem="Dg8-zK-G5V" firstAttribute="top" secondItem="quS-Ra-edC" secondAttribute="bottom" constant="10" id="lWt-OX-BBQ"/>
+                            <constraint firstItem="3ID-H0-bqe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="uzj-LK-70N"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="button" destination="9VF-Og-Iij" id="YcL-67-ZXg"/>
                         <outlet property="buttonWithImage" destination="quS-Ra-edC" id="Gvj-V2-WyA"/>
+                        <outlet property="buttonWithImageOnRight" destination="Dg8-zK-G5V" id="9cu-ie-Qct"/>
                         <outlet property="checkbox" destination="3ID-H0-bqe" id="nKG-9s-0b6"/>
                         <outlet property="radioA" destination="eVD-aq-QtY" id="Anc-3o-Ahv"/>
                         <outlet property="radioB" destination="1Fr-zl-F2e" id="weU-q5-MqA"/>
