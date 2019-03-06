@@ -15,7 +15,7 @@ final class SampleButtonStandardWithImageStyle: ButtonStyleStandardBase {
     
     final override func initializedTrigger() {
         let blue = UIColor(red: 0.0/255.0, green: 122.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-        let orange = UIColor.orange
+        let gray = UIColor.gray
         
         /*---------- Common Settings ----------*/
         buttonStyle
@@ -38,8 +38,8 @@ final class SampleButtonStandardWithImageStyle: ButtonStyleStandardBase {
         /*---------- For State Settings ----------*/
         buttonStyle
             .setState(.highlighted)
-            .setTitleColor(orange)
-            .setBorderColor(orange)
+            .setTitleColor(gray)
+            .setBorderColor(gray)
             .build()
 
         buttonStyle.apply()

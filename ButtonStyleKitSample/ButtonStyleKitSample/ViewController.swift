@@ -38,6 +38,7 @@ class ViewController: UIViewController {
         // button with image
         buttonWithImage.setTitle("long arrow", for: .normal)
         buttonWithImage.setImage(UIImage(named: "arrow")!, for: .normal)
+        buttonWithImage.setImage(UIImage(named: "arrow-highlighted")!, for: .highlighted)
 
         // button with image on the right
         buttonWithImageOnRight.setTitle("expand", for: .normal)
