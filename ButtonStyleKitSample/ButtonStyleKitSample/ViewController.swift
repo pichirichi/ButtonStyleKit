@@ -12,6 +12,10 @@ import ButtonStyleKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var button: SampleButtonStandardStyle!
+    @IBOutlet weak var buttonWithImage: SampleButtonStandardWithImageStyle!
+    
+    @IBOutlet weak var buttonWithImageOnRight: SampleButtonExpandCollapseStyle!
+    
     @IBOutlet weak var checkbox: SampleButtonCheckboxStyle!
     @IBOutlet weak var radioA: SampleButtonRadioStyle!
     @IBOutlet weak var radioB: SampleButtonRadioStyle!
@@ -30,6 +34,22 @@ class ViewController: UIViewController {
         button.setClickHandler { sender in
             print("clicked tag: \(sender.tag)")
         }
+        
+        // button with image
+        buttonWithImage.setTitle("long arrow", for: .normal)
+        buttonWithImage.setImage(UIImage(named: "arrow")!, for: .normal)
+        buttonWithImage.setImage(UIImage(named: "arrow-highlighted")!, for: .highlighted)
+
+        // button with image on the right
+        buttonWithImageOnRight.setTitle("expand", for: .normal)
+        buttonWithImageOnRight.setTitle("collapse", for: .selected)
+
+        buttonWithImageOnRight.setImage(UIImage(named: "expand")!, for: .normal)
+        buttonWithImageOnRight.setImage(UIImage(named: "collapse")!, for: .selected)
+        buttonWithImageOnRight.setClickHandler { [unowned self] sender in
+            self.buttonWithImageOnRight.value = !self.buttonWithImageOnRight.value
+        }
+
         
         radioOnOff()
         
@@ -54,6 +74,7 @@ class ViewController: UIViewController {
             self.group?.select(index: 2)
             self.group?.printValues()
         }
+
     }
     
     func radioOnOff() {

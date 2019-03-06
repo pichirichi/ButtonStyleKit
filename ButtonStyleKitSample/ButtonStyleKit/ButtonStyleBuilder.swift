@@ -15,6 +15,10 @@ private class Data<T> {
     var disabled:    T?
 }
 
+private var _isRightToLeftLayout: Bool {
+    return UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft
+}
+
 open class ButtonStyleBuilder {
     // Basic
     private weak var button: ButtonStyleKit!
@@ -216,17 +220,29 @@ open class ButtonStyleBuilder {
     }
     
     public func setTitleEdgeInsets(top: CGFloat, right: CGFloat, bottom: CGFloat, left: CGFloat) -> Self {
-        setProperty(param: self.titleEdgeInsets, value: UIEdgeInsets(top: top, left: left, bottom: bottom, right: right), state: state)
+        if _isRightToLeftLayout {
+            setProperty(param: self.titleEdgeInsets, value: UIEdgeInsets(top: top, left: right, bottom: bottom, right: left), state: state)
+        } else {
+            setProperty(param: self.titleEdgeInsets, value: UIEdgeInsets(top: top, left: left, bottom: bottom, right: right), state: state)
+        }
         return self
     }
     
     public func setContentEdgeInsets(top: CGFloat, right: CGFloat, bottom: CGFloat, left: CGFloat) -> Self {
-        setProperty(param: self.contentEdgeInsets, value: UIEdgeInsets(top: top, left: left, bottom: bottom, right: right), state: state)
+        if _isRightToLeftLayout {
+            setProperty(param: self.contentEdgeInsets, value: UIEdgeInsets(top: top, left: right, bottom: bottom, right: left), state: state)
+        } else {
+            setProperty(param: self.contentEdgeInsets, value: UIEdgeInsets(top: top, left: left, bottom: bottom, right: right), state: state)
+        }
         return self
     }
     
     public func setImageEdgeInsets(top: CGFloat, right: CGFloat, bottom: CGFloat, left: CGFloat) -> Self {
-        setProperty(param: self.imageEdgeInsets, value: UIEdgeInsets(top: top, left: left, bottom: bottom, right: right), state: state)
+        if _isRightToLeftLayout {
+            setProperty(param: self.imageEdgeInsets, value: UIEdgeInsets(top: top, left: right, bottom: bottom, right: left), state: state)
+        } else {
+            setProperty(param: self.imageEdgeInsets, value: UIEdgeInsets(top: top, left: left, bottom: bottom, right: right), state: state)
+        }
         return self
     }
     
@@ -331,7 +347,15 @@ open class ButtonStyleBuilder {
         }
         
         if let contentHorizontalAlignment = attachProperty(param: contentHorizontalAlignment, state: state) {
-            button.contentHorizontalAlignment = contentHorizontalAlignment
+            // since iOS 11 there is Leading/Trailing aligment.
+            //  Prior to this when changing to RTL we need to flipp btween the two values.
+            if _isRightToLeftLayout && (contentHorizontalAlignment == .left) {
+                button.contentHorizontalAlignment = .right
+            } else if _isRightToLeftLayout && (contentHorizontalAlignment == .right) {
+                button.contentHorizontalAlignment = .left
+            } else {
+                button.contentHorizontalAlignment = contentHorizontalAlignment
+            }
         }
         
         if let contentVerticalAlignment = attachProperty(param: contentVerticalAlignment, state: state) {
